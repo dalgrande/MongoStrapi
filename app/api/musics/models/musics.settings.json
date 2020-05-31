@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musics",
+  "info": {
+    "name": "Musics"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Interpreter": {
+      "type": "string"
+    },
+    "genres": {
+      "collection": "genres",
+      "via": "musics",
+      "dominant": true
+    }
+  }
+}

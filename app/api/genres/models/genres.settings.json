@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "name": "Genres"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Genre": {
+      "type": "string"
+    },
+    "musics": {
+      "via": "genres",
+      "collection": "musics"
+    }
+  }
+}
