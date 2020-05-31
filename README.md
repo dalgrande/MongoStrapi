@@ -1,3 +1,5 @@
+![The Log](MongoStrapi.png)
+Format: ![The Log](url)
 # MongoStrapi
 
 A very straightforward way to spin up a Strapi.io + MongoDB stack.
