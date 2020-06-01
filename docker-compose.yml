@@ -2,14 +2,14 @@ version: "3.7"
 
 services:
 
-  react:    
+  react:      
     restart: unless-stopped        
     build:
       context: ./reactjsfrontend
       dockerfile: Dockerfile
     volumes:
-      - './reactjsfrontend:home/usr/src/app'
-      - 'home/usr/src/app/node_modules'
+      - './reactjsfrontend:/usr/src/app'
+      - '/usr/src/app/node_modules'
     ports:
       - 3000:3000
     environment:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - StrapiMongo       
 
-  StrapiMongo:
+  StrapiMongo:    
     image: strapi/strapi:alpine
     container_name: StrapiMongo
     restart: unless-stopped
@@ -34,11 +34,11 @@ services:
     networks:
       - strapi-app-network
     volumes:
-      - ./app:home/srv/app
+      - ./app:/srv/app
     ports:
       - "1337:1337"
 
-  MongoStrapi:
+  MongoStrapi:    
     image: mongo
     container_name: MongoStrapi
     restart: unless-stopped
@@ -49,7 +49,7 @@ services:
     networks:
       - strapi-app-network
     volumes:
-      - strapidata:home/data/db
+      - strapidata:/data/db
     ports:
       - "27017:27017"  
 networks:
