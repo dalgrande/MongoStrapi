@@ -14,7 +14,7 @@ services:
     environment:
       - NODE_ENV=development
       - REACT_APP_USERS_SERVICE_URL=${REACT_APP_USERS_SERVICE_URL}
-      depends_on:
+    depends_on:
       - StrapiMongo
 
   StrapiMongo:
