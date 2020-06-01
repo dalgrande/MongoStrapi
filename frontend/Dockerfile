@@ -13,4 +13,4 @@ COPY yarn.lock /usr/src/app/yarn.lock
 RUN yarn add react-scripts@3.4.0 -g --silent
 
 # start app
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
