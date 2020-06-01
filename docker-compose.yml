@@ -2,19 +2,20 @@ version: "3.7"
 
 services:
 
-  react:      
-    restart: unless-stopped        
+  frontend:
     build:
-      context: ./reactjsfrontend
+      context: ./frontend
       dockerfile: Dockerfile
     volumes:
-      - './reactjsfrontend:/usr/src/app'
+      - './frontend:/usr/src/app'
       - '/usr/src/app/node_modules'
     ports:
       - 3000:3000
     environment:
-      - NODE_ENV=development             
+      - NODE_ENV=development
+      - REACT_APP_USERS_SERVICE_URL=${REACT_APP_USERS_SERVICE_URL}
 
+               
   StrapiMongo:    
     image: strapi/strapi:alpine
     container_name: StrapiMongo
