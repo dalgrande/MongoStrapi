@@ -8,15 +8,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Build your <code>frontend</code> application with ReactJS!
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          href="http://localhost:1337"
+          target="_self"
           rel="noopener noreferrer"
         >
-          Learn React
+          Here you set-up the API with Strapi.io
         </a>
       </header>
     </div>
