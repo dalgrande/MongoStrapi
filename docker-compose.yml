@@ -13,9 +13,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - NODE_ENV=development      
-    depends_on:
-      - StrapiMongo
+      - NODE_ENV=development          
 
   StrapiMongo:
     image: strapi/strapi:alpine

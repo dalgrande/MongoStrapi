@@ -105,4 +105,3 @@ dist
 #Frontend
 reactjsfrontend/node_modules
 reactjsfrontend/build
-Dockerfile.prod
