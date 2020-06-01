@@ -101,7 +101,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-#Frontend
-reactjsfrontend/node_modules
-reactjsfrontend/build
